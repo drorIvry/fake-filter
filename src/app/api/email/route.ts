@@ -1,6 +1,6 @@
-import { EmailTemplate } from "@/components/emails/FirstEmail";
-import { resend } from "@/lib/email";
-import { emailSchema } from "@/lib/email/utils";
+import { EmailTemplate } from "~/components/emails/FirstEmail";
+import { resend } from "~/lib/email";
+import { emailSchema } from "~/lib/email/utils";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {

@@ -1,8 +1,8 @@
-import { db } from "@/lib/db";
-import { PrismaAdapter } from "@auth/prisma-adapter"
+import { db } from "~/lib/db";
+import { PrismaAdapter } from "@auth/prisma-adapter";
 import { DefaultSession, NextAuthOptions } from "next-auth";
 import NextAuth from "next-auth/next";
-import { env } from "@/lib/env.mjs"
+import { env } from "~/lib/env.mjs";
 import DiscordProvider from "next-auth/providers/discord";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
@@ -24,7 +24,7 @@ export const authOptions: NextAuthOptions = {
     },
   },
   providers: [
-     DiscordProvider({
+    DiscordProvider({
       clientId: env.DISCORD_CLIENT_ID,
       clientSecret: env.DISCORD_CLIENT_SECRET,
     }),
@@ -35,7 +35,7 @@ export const authOptions: NextAuthOptions = {
     GithubProvider({
       clientId: env.GITHUB_CLIENT_ID,
       clientSecret: env.GITHUB_CLIENT_SECRET,
-    })
+    }),
   ],
 };
 
